@@ -1,5 +1,5 @@
 // INPUT
-# define rButton 2 
+# define rButton 2
 # define lButton 3
 # define sensor A0
 
@@ -34,7 +34,7 @@ void loop() {
   int rInput = digitalRead(rButton);
   int lInput = digitalRead(lButton);
   int nightCheck = analogRead(sensor);
-  
+
   // verify turn signals
   if(rInput == 1){
     rTurn = true;
@@ -61,11 +61,12 @@ void loop() {
     ledsOff();
   }
   //Serial.println(nightCheck);
-  
+
   // check signal stop
-  if(turnRep >= 4*10){
+  if(turnRep >= 4*10+1){
     rTurn = false;
     lTurn = false;
+    turnRep = 0;
     ledsOff();
   }
 
@@ -75,10 +76,7 @@ void loop() {
 
 void goRight(){
   // turn off all the LEDs
-  digitalWrite(led1, 0);
-  digitalWrite(led2, 0);
-  digitalWrite(led3, 0);
-  digitalWrite(led4, 0);
+  ledsOff();
   // select corresponding LED to turn on
   switch(currentLED){
     case 0:
@@ -99,10 +97,7 @@ void goRight(){
 }
 void goLeft(){
   // turn off all the LEDs
-  digitalWrite(led1, 0);
-  digitalWrite(led2, 0);
-  digitalWrite(led3, 0);
-  digitalWrite(led4, 0);
+  ledsOff();
   // select corresponding LED to turn on
   switch(currentLED){
     case 0:
@@ -133,3 +128,4 @@ void ledsOn(){
   digitalWrite(led3, 3);
   digitalWrite(led4, 4);
 }
+
