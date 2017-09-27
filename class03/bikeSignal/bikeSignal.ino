@@ -49,10 +49,15 @@ void loop() {
   }
 
   // turn signal or turn on/off leds
-  if(rTurn){
+  if(turnRep >= 4*10){  // check signal stop
+    rTurn = false;
+    lTurn = false;
+    turnRep = 0;
+    ledsOff();
+  } else if(rTurn){       // turn right
     goRight();
     turnRep++;
-  } else if(lTurn){
+  } else if(lTurn){       // turn left
     goLeft();
     turnRep++;
   } else if(nightCheck <= 300){ // if it's dark, turn LEDs on
@@ -61,14 +66,6 @@ void loop() {
     ledsOff();
   }
   //Serial.println(nightCheck);
-
-  // check signal stop
-  if(turnRep >= 4*10+1){
-    rTurn = false;
-    lTurn = false;
-    turnRep = 0;
-    ledsOff();
-  }
 
   // delay for next light/signal
   delay(timeDelay);
@@ -128,4 +125,3 @@ void ledsOn(){
   digitalWrite(led3, 3);
   digitalWrite(led4, 4);
 }
-
