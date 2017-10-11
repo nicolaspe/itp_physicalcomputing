@@ -13,6 +13,7 @@ int occurrence = 50;
 // pots setup
 # define bigPot A0
 # define smlPot A1
+# define slider A5
 
 // time keeping from
 // http://www.makeuseof.com/tag/arduino-delay-function-shouldnt-use/
@@ -39,6 +40,7 @@ void setup() {
   // pots setup
   pinMode(bigPot, INPUT);
   pinMode(smlPot, INPUT);
+  pinMode(slider, INPUT);
 
   // Serial com
   Serial.begin(9600);
@@ -48,6 +50,9 @@ void loop() {
   /* analog info read */
   int bigVal = analogRead(bigPot)/10;
   int smlVal = analogRead(smlPot)/10;
+  int sliderVal = analogRead(slider);
+
+  Serial.println(sliderVal);
 
   /* big pot to interval */
   interval = map(bigVal, 0, 102, 50, 220);
