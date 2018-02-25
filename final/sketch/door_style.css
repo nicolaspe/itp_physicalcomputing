@@ -1,0 +1,27 @@
+html {
+	background: black;
+	padding: 15px;
+}
+
+body {
+	color: #FFE5CC;
+	font-family: "Helvetica", "Tahoma", "Arial", "sans";
+	font-weight: lighter;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2, h3 {
+	color: #FFA64C;
+}
+
+#instructions {
+	padding-left: 30px;
+}
+#instructions ul {
+	padding-left: 20px;
+	line-height: 1.5em;
+	list-style-type: none;
+}

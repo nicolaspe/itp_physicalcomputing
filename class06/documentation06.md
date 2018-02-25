@@ -1,6 +1,10 @@
 # Hollywood Witch-hunt
 
-### Research: Hollywood's unpunished sexual predators
+[Final sketch](https://nicolaspe.github.io/witch_hunt/)
+
+
+
+## Inspiration and research: Hollywood's unpunished sexual predators
 - Harvey Weinstein
 - Woody Allen
 - Casey Affleck
@@ -16,7 +20,33 @@
 - Nicholas Cage, [domestic abuse](http://abcnews.go.com/Entertainment/nicolas-cage-held-domestic-abuse-charges-orleans/story?id=13390765)
 - Darryl F. Zanuck [Link](https://nypost.com/2017/10/16/hollywoods-horror-stories-of-sex-predators-long-before-weinstein/)
 
-### Sources:
+
+## Subject animation
+
+#### Photos
+
+Faces
+
+Body
+
+Salem background
+
+#### p5.play library
+
+
+## Interaction
+
+#### Arduino
+
+#### Keyboard control
+(to be able to upload it...)
+
+
+## Details
+
+### (Re)Sources:
+- [p5.play library](http://p5play.molleindustria.org/)
 - https://www.thedailybeast.com/its-not-just-cosby-hollywoods-long-list-of-male-scumbags
 - https://www.theverge.com/2017/10/13/16469498/sexual-harassment-accusations-harvey-weinstein-roy-price-rose-mcgowan-jeff-bezos-amazon-studios
 - [Bodies image source](http://fortune.com/2016/03/09/short-overweight-study/)
+- [Background image](http://www.todayifoundout.com/wp-content/uploads/2013/09/burned-at-the-stake-860x280.jpg)
